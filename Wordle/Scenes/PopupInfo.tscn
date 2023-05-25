@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://dboa0vxdcb4b7"]
+
+[ext_resource type="Script" path="res://Scripts/PopupInfo.gd" id="1_qkqht"]
+
+[node name="InfoMenu" type="Window"]
+title = "Info"
+size = Vector2i(760, 479)
+mode = 1
+wrap_controls = true
+transient = true
+always_on_top = true
+popup_window = true
+script = ExtResource("1_qkqht")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.47451, 0.258824, 0.372549, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Text1" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "This Wordle-clone was made by a humble IT-student who's having fun messing around in Godot!
+
+"
+autowrap_mode = 2
+
+[node name="VideoLink" type="LinkButton" parent="VBoxContainer"]
+layout_mode = 2
+text = "I used this tutorial as a guide, then went my own way."
+uri = "https://www.youtube.com/watch?v=si8bvxxWku8&t=1059s"
+
+[node name="Text2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "No, i don't speak the language from the video. I simply looked at the code because I am big smart.
+
+The wordlists I got from these links; I combined and modified them according to my needs."
+autowrap_mode = 2
+
+[node name="WordListLink1" type="LinkButton" parent="VBoxContainer"]
+layout_mode = 2
+text = "https://raw.githubusercontent.com/charlesreid1/five-letter-words/master/sgb-words.txt"
+uri = "https://raw.githubusercontent.com/charlesreid1/five-letter-words/master/sgb-words.txt"
+
+[node name="WordListLink2" type="LinkButton" parent="VBoxContainer"]
+layout_mode = 2
+text = "https://www.mit.edu/~ecprice/wordlist.10000"
+uri = "https://www.mit.edu/~ecprice/wordlist.10000"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "
+
+Project made in May 2023 using Godot 4.0.2"
+autowrap_mode = 2
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]

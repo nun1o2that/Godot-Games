@@ -1,0 +1,134 @@
+[gd_scene load_steps=5 format=3 uid="uid://dy1ql7rapix35"]
+
+[ext_resource type="Script" path="res://Scripts/MAIN.gd" id="1_rfasp"]
+[ext_resource type="PackedScene" uid="uid://bj6olp6vlll4v" path="res://Scenes/BackgroundColorMenu.tscn" id="2_nwq3n"]
+[ext_resource type="PackedScene" path="res://Scenes/MiddleGUI.tscn" id="3_7rwb3"]
+[ext_resource type="PackedScene" uid="uid://dboa0vxdcb4b7" path="res://Scenes/PopupInfo.tscn" id="4_2icf4"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rfasp")
+
+[node name="BackgroundColorMenu" parent="." instance=ExtResource("2_nwq3n")]
+layout_mode = 1
+
+[node name="MiddleGUI" parent="." instance=ExtResource("3_7rwb3")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.0
+offset_top = -344.5
+offset_right = 205.0
+offset_bottom = 322.5
+
+[node name="GameRules" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -394.0
+offset_top = -275.0
+offset_right = -44.0
+offset_bottom = 105.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 25
+text = "Game Rules:
+
++ Search for a 5-letter word!
+
++ if you've guessed a correct letter, it turns yellow
+
++ if you've guessed a correct letter at the right position, it turns green"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="GameRules2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -275.0
+offset_right = 400.0
+offset_bottom = 105.0
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 25
+text = "Controls:
+
++ ENTER to enter a word
++ ESCAPE to close program
++ 0 to reset the game"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="WORDLE" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -190.0
+offset_top = 18.0
+offset_right = 20.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 50
+text = "WORDLE"
+horizontal_alignment = 1
+
+[node name="bymeeeee" type="Label" parent="."]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 44.0
+offset_right = 836.0
+offset_bottom = 82.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 25
+text = "by meeeee :)"
+
+[node name="InfoButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -167.0
+offset_top = -112.0
+offset_right = -111.0
+offset_bottom = -69.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+theme_override_font_sizes/font_size = 25
+text = "Info"
+
+[node name="InfoMenu" parent="." instance=ExtResource("4_2icf4")]
+visible = false
+
+[connection signal="pressed" from="InfoButton" to="." method="_on_info_button_pressed"]

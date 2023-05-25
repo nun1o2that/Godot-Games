@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://c6338hv1xisv"]
+
+[ext_resource type="Script" path="res://Scripts/MainGame.gd" id="1_vc8y6"]
+[ext_resource type="PackedScene" uid="uid://u4ycgmlm1u0g" path="res://Scenes/PauseMenu.tscn" id="2_gsmum"]
+[ext_resource type="Texture2D" uid="uid://bwffss8u1y6c2" path="res://Sprites/AppleSprite.png" id="2_hfxan"]
+[ext_resource type="Texture2D" uid="uid://dyjth81618lu" path="res://Sprites/Godtierjadesprite.png" id="2_hl4mj"]
+[ext_resource type="Texture2D" uid="uid://tec5o71s8e5q" path="res://Sprites/SnakeSpriteSheet.png" id="3_qavrv"]
+[ext_resource type="PackedScene" uid="uid://d21figt0xlcn3" path="res://Scenes/BackgroundTiles.tscn" id="5_3l8e3"]
+[ext_resource type="Script" path="res://Scripts/Score.gd" id="6_hdqu6"]
+[ext_resource type="PackedScene" uid="uid://b60n0t3ggajrq" path="res://Scenes/GameOverMenu.tscn" id="8_xpsno"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e00kh"]
+texture = ExtResource("3_qavrv")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i7uno"]
+texture = ExtResource("2_hfxan")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mvo35"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_e00kh")
+sources/1 = SubResource("TileSetAtlasSource_i7uno")
+
+[node name="MainGame" type="Node"]
+script = ExtResource("1_vc8y6")
+
+[node name="OneBadGloopAndSheDoWhatIYoinky" type="TextureRect" parent="."]
+visible = false
+offset_right = 1030.0
+offset_bottom = 1028.0
+texture = ExtResource("2_hl4mj")
+
+[node name="BackgroundTiles" parent="." instance=ExtResource("5_3l8e3")]
+
+[node name="SnakeAndApple" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_mvo35")
+cell_quadrant_size = 32
+format = 2
+layer_0/name = "0"
+
+[node name="Score" type="Label" parent="."]
+offset_left = 490.0
+offset_top = 3.0
+offset_right = 530.0
+offset_bottom = 29.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "0"
+script = ExtResource("6_hdqu6")
+
+[node name="GameOverMenu" parent="." instance=ExtResource("8_xpsno")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_gsmum")]
+
+[node name="SnakeTick" type="Timer" parent="."]
+wait_time = 0.08
+autostart = true
+
+[connection signal="timeout" from="SnakeTick" to="." method="_on_snake_tick_timeout"]

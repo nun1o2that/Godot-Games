@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/SingularLine.gd" id="1_bh26q"]
+[ext_resource type="PackedScene" uid="uid://cdkkkl6nvwapm" path="res://Scenes/SingularLetter.tscn" id="2_2ihwh"]
+
+[node name="SingularLine" type="HBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5
+offset_top = -65.5
+offset_right = 32.5
+offset_bottom = 65.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+script = ExtResource("1_bh26q")
+
+[node name="Letter0" parent="." instance=ExtResource("2_2ihwh")]
+layout_mode = 2
+
+[node name="Letter1" parent="." instance=ExtResource("2_2ihwh")]
+layout_mode = 2
+
+[node name="Letter2" parent="." instance=ExtResource("2_2ihwh")]
+layout_mode = 2
+
+[node name="Letter3" parent="." instance=ExtResource("2_2ihwh")]
+layout_mode = 2
+
+[node name="Letter4" parent="." instance=ExtResource("2_2ihwh")]
+layout_mode = 2

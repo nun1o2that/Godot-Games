@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj2srgh8n4qrg"]
+
+[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_dbm56"]
+[ext_resource type="PackedScene" uid="uid://d21figt0xlcn3" path="res://Scenes/BackgroundTiles.tscn" id="2_g4hbn"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dbm56")
+
+[node name="BackgroundTiles" parent="." instance=ExtResource("2_g4hbn")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.411765)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -109.5
+offset_top = -81.0
+offset_right = 109.5
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.701961, 0.827451, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Snake Game :)"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Start Game"
+
+[node name="QuitButton" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Quit"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ColorRect/VBoxContainer"]
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

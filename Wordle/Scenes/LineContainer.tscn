@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg53vjxp6i3tq"]
+
+[ext_resource type="Script" path="res://Scripts/LineContainer.gd" id="1_vp5pn"]
+[ext_resource type="PackedScene" path="res://Scenes/SingularLine.tscn" id="2_3jso7"]
+
+[node name="LineContainer" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+script = ExtResource("1_vp5pn")
+
+[node name="Line0" parent="." instance=ExtResource("2_3jso7")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Line1" parent="." instance=ExtResource("2_3jso7")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Line2" parent="." instance=ExtResource("2_3jso7")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Line3" parent="." instance=ExtResource("2_3jso7")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Line4" parent="." instance=ExtResource("2_3jso7")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Line5" parent="." instance=ExtResource("2_3jso7")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="WordMessages" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 25
+text = " "
+horizontal_alignment = 1

@@ -1,0 +1,15 @@
+Label
+Button
+TextureRect
+AudioStreamPlayer
+Sprite2D
+Node2D
+AnimationPlayer
+CanvasLayer
+Node
+Control
+PanelContainer
+VBoxContainer
+ColorRect
+TileMap
+Timer

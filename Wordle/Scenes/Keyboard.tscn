@@ -1,0 +1,123 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwlw1bfmguclu"]
+
+[ext_resource type="Script" path="res://Scripts/Keyboard.gd" id="1_salpw"]
+[ext_resource type="PackedScene" uid="uid://cdkkkl6nvwapm" path="res://Scenes/SingularLetter.tscn" id="2_2b201"]
+
+[node name="Keyboard" type="Control"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_salpw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -368.0
+offset_top = -109.0
+offset_right = 368.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Line0" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="Alphabet0" parent="VBoxContainer/Line0" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet1" parent="VBoxContainer/Line0" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet2" parent="VBoxContainer/Line0" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet3" parent="VBoxContainer/Line0" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet4" parent="VBoxContainer/Line0" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet5" parent="VBoxContainer/Line0" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet6" parent="VBoxContainer/Line0" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet7" parent="VBoxContainer/Line0" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet8" parent="VBoxContainer/Line0" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet9" parent="VBoxContainer/Line0" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Line1" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="Alphabet10" parent="VBoxContainer/Line1" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet11" parent="VBoxContainer/Line1" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet12" parent="VBoxContainer/Line1" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet13" parent="VBoxContainer/Line1" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet14" parent="VBoxContainer/Line1" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet15" parent="VBoxContainer/Line1" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet16" parent="VBoxContainer/Line1" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet17" parent="VBoxContainer/Line1" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet18" parent="VBoxContainer/Line1" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Line2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="Alphabet19" parent="VBoxContainer/Line2" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet20" parent="VBoxContainer/Line2" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet21" parent="VBoxContainer/Line2" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet22" parent="VBoxContainer/Line2" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet23" parent="VBoxContainer/Line2" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet24" parent="VBoxContainer/Line2" instance=ExtResource("2_2b201")]
+layout_mode = 2
+
+[node name="Alphabet25" parent="VBoxContainer/Line2" instance=ExtResource("2_2b201")]
+layout_mode = 2
